@@ -1,5 +1,5 @@
 FGGTextField简介<br>
-![演示](https://github.com/Insfgg99x/FGGATextFieldDemo/blob/master/FGGTextField.gif)<br>
+![演示](https://github.com/Insfgg99x/FGGTextField/blob/master/FGGTextField.gif)<br>
 ----------------------------------------------------------------<br>
 FGGTextField继承自UITextField，依赖第三方库AJWValidator，<br>
 用于实现文本框输入文本的实时监测，酷炫简介的提示效果。<br>
