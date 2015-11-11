@@ -1,7 +1,7 @@
 FGGTextField简介<br>
 ![演示](https://github.com/Insfgg99x/FGGTextField/blob/master/FGGTextField.gif)<br>
 ----------------------------------------------------------------<br>
-FGGTextField继承自UITextField，依赖第三方库AJWValidator，<br>
+FGGTextField继承自UITextField，依赖第AJWValidator，<br>
 用于实现文本框输入文本的实时监测，酷炫简介的提示效果。<br>
 声明：FGGTextField借鉴了一个名为UITextBox的Swift的库<br>
 <br>
