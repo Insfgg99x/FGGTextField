@@ -18,10 +18,6 @@ tf.validatorText=@"邮箱";<br>
 tf.borderStyle=UITextBorderStyleRoundedRect;<br>
 tf.keyboardType=UIKeyboardTypeEmailAddress;<br>
 4.添加到父视图<br>
-***********************************<br>
- 
-***********************************<br>
-[self.view addSubview:tf];<br>
  
 如果有问题，可以给我发邮件：newbox0512@yahoo.com<br>
 <br>
