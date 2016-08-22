@@ -63,7 +63,7 @@
     self.defaultText=placeholder;
     if(_placeHolderLabel)
     {
-        _placeHolderLabel.text=[super placeholder];
+        _placeHolderLabel.text=placeholder;
         [self layoutSubviews];
     }
 }

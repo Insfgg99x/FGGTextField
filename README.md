@@ -1,4 +1,4 @@
-FGGTextField简介<br>
+FGGTextField简介<br> version2.0
 ![演示](https://github.com/Insfgg99x/FGGTextField/blob/master/FGGTextField.gif)<br>
 ----------------------------------------------------------------<br>
 FGGTextField继承自UITextField，依赖第AJWValidator，<br>
@@ -19,13 +19,11 @@ tf.borderStyle=UITextBorderStyleRoundedRect;<br>
 tf.keyboardType=UIKeyboardTypeEmailAddress;<br>
 4.添加到父视图<br>
 ***********************************<br>
-*注意:一定要在设置属性之后再添加到父视图*<br>
+ 
 ***********************************<br>
 [self.view addSubview:tf];<br>
-不要问为啥要后添加到父视图，我也很想解决这个问题，你就当是一个bug呗-.-<br>
-如果找到好的解决办法，欢迎pull request，repository地址是：<br>
-https://github.com/Insfgg99x/FGGTextField.git<br>
-或者发给我发邮件：newbox0512@yahoo.com<br>
+ 
+如果有问题，可以给我发邮件：newbox0512@yahoo.com<br>
 <br>
 ©夏桂峰<br>
 ----------------------------------------------------------------<br>
