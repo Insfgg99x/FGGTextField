@@ -48,7 +48,7 @@ validator.validatorStateChangedHandler=^(AJWValidatorState state){
          }
      };
 ```
-##Example
+##Explain
 >1.在项目中导入：FGGTextField.h<br>
 2.创建FGGTextField的对象<br>
 FGGTextField *tf=[[FGGTextField alloc]initWithFrame:CGRectMake(50, 100, 200, 40)];<br>
