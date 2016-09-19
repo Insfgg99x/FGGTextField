@@ -8,32 +8,32 @@
 
 #import "FGGTextField.h"
 
-@interface FGGTextField()
-{
+@interface FGGTextField(){
+    
     FGGTextFieldHighlightState _highlightState;
 }
 
 @end
 
-@implementation FGGTextField
-{
+@implementation FGGTextField{
+    
     UIColor *_backgroundColor;
 }
 
 //highlightState的get方法
--(FGGTextFieldHighlightState)highlightState
-{
+-(FGGTextFieldHighlightState)highlightState{
+    
     if(self.text==nil||self.text.length==0)
         return FGGTextFieldHighlightStateDefault;
     else
         return _highlightState;
 }
 //highlightState的set方法
--(void)setHighlightState:(FGGTextFieldHighlightState)state
-{
+-(void)setHighlightState:(FGGTextFieldHighlightState)state{
+    
     _highlightState=state;
-    if(_placeHolderLabel)
-    {
+    if(_placeHolderLabel){
+        
         [self setHighlightText:_placeHolderLabel state:self.highlightState];
         [self layoutSubviews];
     }
@@ -42,24 +42,24 @@
     }];
 }
 //backgroundColor的set方法
--(void)setBackgroundColor:(UIColor *)backgroundColor
-{
+-(void)setBackgroundColor:(UIColor *)backgroundColor{
+    
     [super setBackgroundColor:backgroundColor];
     super.backgroundColor=[self getHighlightColorFromState:self.highlightState];
 }
 //attributedPlaceholder的set方法
--(void)setAttributedPlaceholder:(NSAttributedString *)attributedPlaceholder
-{
+-(void)setAttributedPlaceholder:(NSAttributedString *)attributedPlaceholder{
+    
     [super setAttributedPlaceholder:attributedPlaceholder];
-    if(_placeHolderLabel)
-    {
+    if(_placeHolderLabel){
+        
         _placeHolderLabel.attributedText=super.attributedPlaceholder;
         [self layoutSubviews];
     }
 }
 //placeholder的set方法
--(void)setPlaceholder:(NSString *)placeholder
-{
+-(void)setPlaceholder:(NSString *)placeholder{
+    
     self.defaultText=placeholder;
     if(_placeHolderLabel)
     {
@@ -68,8 +68,8 @@
     }
 }
 //调整子控件布局
--(void)layoutSubviews
-{
+-(void)layoutSubviews{
+    
     [super layoutSubviews];
     CGRect rect=[super placeholderRectForBounds:self.bounds];
     if([self isFirstResponder])
@@ -80,18 +80,18 @@
         [self layoutPlaceholderLabel:rect left:NO];
 }
 //布局提示文本
--(void)layoutPlaceholderLabel:(CGRect)rect left:(BOOL)left
-{
+-(void)layoutPlaceholderLabel:(CGRect)rect left:(BOOL)left{
+    
     if(!_placeHolderLabel)
         return;
-    if(left)
-    {
+    if(left){
+        
         [UIView animateWithDuration:animateDuration delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
             _placeHolderLabel.frame=rect;
         } completion:nil];
     }
-    else
-    {
+    else{
+        
         CGSize size=[_placeHolderLabel sizeThatFits:rect.size];
         CGRect frame=rect;
         frame.size.width=size.width;
@@ -103,27 +103,28 @@
     }
 }
 //获得焦点时高亮动画
--(BOOL)becomeFirstResponder
-{
+-(BOOL)becomeFirstResponder{
+    
     return [self animationFirstResponder:[super becomeFirstResponder]];
 }
 //失去焦点时取消高亮动画
--(BOOL)resignFirstResponder
-{
+-(BOOL)resignFirstResponder{
+    
     return [self animationFirstResponder:[super resignFirstResponder]];
 }
--(BOOL)animationFirstResponder:(BOOL)isFirstResponder
-{
+-(BOOL)animationFirstResponder:(BOOL)isFirstResponder{
+
+    __weak typeof(self) wkself=self;
     [UIView animateWithDuration:animateDuration animations:^{
-        UIColor *color=[self getHighlightColorFromState:self.highlightState];
+        UIColor *color=[wkself getHighlightColorFromState:wkself.highlightState];
         super.backgroundColor=color;
-        _placeHolderLabel.textColor=[self getTextColorWithHighlightColor:color];
+        wkself.placeHolderLabel.textColor=[wkself getTextColorWithHighlightColor:color];
     }];
     return [self isFirstResponder];
 }
 // 同类颜色加深一些
--(UIColor *)getTextColorWithHighlightColor:(UIColor *)color
-{
+-(UIColor *)getTextColorWithHighlightColor:(UIColor *)color{
+    
     CGFloat r=0.0;
     CGFloat g=0.0;
     CGFloat b=0.0;
@@ -132,8 +133,8 @@
     return [UIColor colorWithRed:0.7*r*r green:0.7*g*g blue:0.7*b*b alpha:0.7*a];
 }
 //根据状态获取颜色
--(UIColor *)getHighlightColorFromState:(FGGTextFieldHighlightState)state
-{
+-(UIColor *)getHighlightColorFromState:(FGGTextFieldHighlightState)state{
+    
     switch (state){
     case FGGTextFieldHighlightStateWrong:
             return wrongColor;
@@ -148,8 +149,8 @@
             return [self isFirstResponder] ? highlightColor : self.backgroundColor;//?? [UIColor whiteColor];
     }
 }
--(void)willMoveToSuperview:(UIView *)newSuperview
-{
+-(void)willMoveToSuperview:(UIView *)newSuperview{
+    
     [super willMoveToSuperview:newSuperview];
     if(!_placeHolderLabel)
     {
@@ -161,8 +162,8 @@
         [self addSubview:_placeHolderLabel];
     }
 }
--(void)setHighlightText:(UILabel *)label state:(FGGTextFieldHighlightState)state
-{
+-(void)setHighlightText:(UILabel *)label state:(FGGTextFieldHighlightState)state{
+    
     switch (state) {
         case FGGTextFieldHighlightStateDefault:
             label.textColor=[self getTextColorWithHighlightColor:self.textColor];
