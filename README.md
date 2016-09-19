@@ -2,6 +2,7 @@
 ..............................................................
 ##Introduction
 一个超级酷炫的文本输入框，继承自UITextField，依赖于AJWValidator.用于实现文本输入的实时监测。
+![](https://github.com/Insfgg99x/FGGTextField/blob/master/FGGTextField.gif)<br>
 ##Installtion
 Manual:
 
