@@ -1,19 +1,26 @@
-#FGGTextField
-..............................................................
-##Introduction
+# FGGTextField
+
+一个超级酷炫的文本输入框
+
+## Introduction
+
 一个超级酷炫的文本输入框，继承自UITextField，依赖于AJWValidator.用于实现文本输入的实时监测。
-![](https://github.com/Insfgg99x/FGGTextField/blob/master/FGGTextField.gif)<br>
-##Installtion
-Manual:
+
+![](https://github.com/Insfgg99x/FGGTextField/blob/master/FGGTextField.gif)
+
+## Installtion
+
+>Manual:
 
 Download This Project and drag the FGGTextField folder into your peroject, do not forget to ensure "copy item if need" being selected.
 
-Cocoapods:
+> Cocoapods:
 ```
 pod 'FGGTextField', '~> 1.0.0'
 ```
 
-##Usage
+## Usage
+
 Just import the header file:`import "FGGTextField.h"`
 
 ```
@@ -48,7 +55,8 @@ validator.validatorStateChangedHandler=^(AJWValidatorState state){
          }
      };
 ```
-##Explain
+## Explain
+
 >1.在项目中导入：FGGTextField.h<br>
 2.创建FGGTextField的对象<br>
 FGGTextField *tf=[[FGGTextField alloc]initWithFrame:CGRectMake(50, 100, 200, 40)];<br>
@@ -61,13 +69,11 @@ tf.borderStyle=UITextBorderStyleRoundedRect;<br>
 tf.keyboardType=UIKeyboardTypeEmailAddress;<br>
 4.添加到父视图<br>如果有问题，可以给我发邮件：newbox0512@yahoo.com<br>
 
-##About Me
+## About Me
 - Blog:     [CGPointZeero](http://cgpointzero.top)
 - GitHub:   [Insfgg99x](https://github.com/Insfgg99x)
 - Mooc:     [CGPointZero](http://www.imooc.com/u/3909164/articles)
 - Jianshu:  [CGPointZero](http://www.jianshu.com/users/c3f2e8c87dc4/latest_articles)
 - Email:    [newbox0512@yahoo.com](mailto:newbox0512@yahoo.com)
 
-..............................................................
-
-@CGPoitZero
+# @CGPoitZero
