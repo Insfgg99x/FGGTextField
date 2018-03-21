@@ -56,16 +56,21 @@ validator.validatorStateChangedHandler=^(AJWValidatorState state){
      };
 ```
 
-1.在项目中导入：FGGTextField.h
-2.创建FGGTextField的对象
-FGGTextField *tf=[[FGGTextField alloc]initWithFrame:CGRectMake(50, 100, 200, 40)];
-3.设置属性
-tf.placeholder=@"请输入邮箱";
-tf.errorText=@"邮箱格式不正确";
-tf.validatorText=@"邮箱";
-tf.borderStyle=UITextBorderStyleRoundedRect;
-tf.keyboardType=UIKeyboardTypeEmailAddress;
-4.添加到父视图
+>1.在项目中导入：FGGTextField.h
+
+>2.创建FGGTextField的对象
+
+- FGGTextField *tf=[[FGGTextField alloc]initWithFrame:CGRectMake(50, 100, 200, 40)];
+
+>3.设置属性
+
+- tf.placeholder=@"请输入邮箱";
+- tf.errorText=@"邮箱格式不正确";
+- tf.validatorText=@"邮箱";
+- tf.borderStyle=UITextBorderStyleRoundedRect;
+- tf.keyboardType=UIKeyboardTypeEmailAddress;
+
+>4.添加到父视图
 
 ## About Me
 - Blog:     [CGPointZeero](http://cgpointzero.top)
@@ -74,6 +79,6 @@ tf.keyboardType=UIKeyboardTypeEmailAddress;
 - Jianshu:  [CGPointZero](http://www.jianshu.com/users/c3f2e8c87dc4/latest_articles)
 - Email:    [newbox0512@yahoo.com](mailto:newbox0512@yahoo.com)
 
-如果有问题，可以给我发邮件：newbox0512@yahoo.com
-
 # @CGPoitZero
+
+如果有问题，可以给我发邮件：newbox0512@yahoo.com
